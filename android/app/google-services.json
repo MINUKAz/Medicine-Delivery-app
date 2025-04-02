@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "953286574936",
+    "project_id": "medicine-delivery-5aa24",
+    "storage_bucket": "medicine-delivery-5aa24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953286574936:android:69a53171fb6eb326005b2d",
+        "android_client_info": {
+          "package_name": "com.example.untitled3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGiw_qxGGDv6ZEjQDLyqZl5s9FwOItjxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
