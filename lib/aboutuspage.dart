@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'homepage.dart';
-import 'contactus.dart';
+import 'aboutuspage.dart';
 
-class AboutUsScreen extends StatefulWidget {
-  const AboutUsScreen({super.key});
+class ContactUsScreen extends StatefulWidget {
+  const ContactUsScreen({super.key});
 
   @override
-  State<AboutUsScreen> createState() => _AboutUsScreenState();
+  State<ContactUsScreen> createState() => _ContactUsScreenState();
 }
 
-class _AboutUsScreenState extends State<AboutUsScreen> {
-  int _selectedIndex = 1; // Set the default index to 1 for "About Us"
+class _ContactUsScreenState extends State<ContactUsScreen> {
+  int _selectedIndex = 2; // Set the default index to 2 for "Contact Us"
 
   void _onItemTapped(int index) {
     setState(() {
@@ -23,11 +23,11 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
       );
-    } else if (index == 2) {
-      // Navigate to Contact Us Page
+    } else if (index == 1) {
+      // Navigate to About Us Page
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const ContactUsScreen()),
+        MaterialPageRoute(builder: (context) => const AboutUsScreen()),
       );
     }
   }
@@ -39,7 +39,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false, // Removes the back button
         title: const Text(
-          "About Us",
+          "Contact Us",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -60,18 +60,16 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Text(
-                  "About Us",
+                  "Contact Us",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(height: 10),
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  'https://cepr.net/wp-content/uploads/2022/05/REIT-970.png', // Replace with your actual image URL
-                  height: 180,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                    child: Text(
+                      "Image Placeholder",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
               const SizedBox(height: 10),
@@ -82,12 +80,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 child: const Padding(
                   padding: EdgeInsets.all(12.0),
                   child: Text(
-                    '"At Nation delivery we’re here to simplify your healthcare journey. '
-                    'Whether you need a digital prescription from your doctor, everyday essentials like '
-                    'Panadol or vitamins, or a reliable way to track your medication delivery, '
-                    'we’ve got you covered. Our app connects you directly to trusted pharmacists and doctors, '
-                    'ensuring your health is always a tap away. No more waiting in lines—just fast, secure, '
-                    'and hassle-free care, right to your doorstep."',
+                    "Need assistance? Contact us anytime! Whether you have a question about our services, need help with an order, or want to give us feedback, we're here to help.",
                     style: TextStyle(fontSize: 14, height: 1.5),
                     textAlign: TextAlign.center,
                   ),
@@ -97,7 +90,37 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
               ElevatedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.phone),
-                label: const Text("Contact Us"),
+                label: const Text("Call Us: +94 771 234 567"),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                    side: const BorderSide(color: Colors.black),
+                  ),
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.email),
+                label: const Text("Email: support@nationdelivery.com"),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                    side: const BorderSide(color: Colors.black),
+                  ),
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.location_on),
+                label: const Text("Visit Us: 123 Main Street, Colombo"),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
                   shape: RoundedRectangleBorder(
